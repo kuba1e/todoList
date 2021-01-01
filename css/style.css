@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(120deg, #f6d365, #fda080);
+  color: white;
+  font: 30px/1 "Poppins", sans-serif;
+  min-width: 100vh;
+}
+
+header,
+form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form input,
+form button {
+  padding: 10px;
+  font-size: 24px;
+  border: none;
+  background: white;
+}
+form input {
+  border-radius: 10px 0 0 10px;
+}
+
+form button {
+  color: #f6d365;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  border-radius: 0 10px 10px 0;
+}
+
+form button:hover {
+  background: #f6d365;
+  color: white;
+}
+
+.to-do-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.to-do-list {
+  min-width: 30%;
+  list-style: none;
+}
+
+.to-do {
+  margin: 20px;
+  background: white;
+  color: black;
+  font-size: 24px;
+  line-height: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  transition: all 0.5s ease-in-out 0.5s;
+}
+
+.to-do li {
+  flex: 1;
+}
+
+.completed-btn,
+.delete-btn {
+  background: #ff6f47;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.delete-btn {
+  border-radius: 0 10px 10px 0;
+}
+
+.completed-btn {
+  background: rgb(73, 204, 73);
+}
+
+.to-do-item {
+  padding: 0 10px;
+}
+
+.fa-trash,
+.fa-check {
+  pointer-events: none;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.delanim {
+  transition: all 1s ease-in-out 0.5s;
+  transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0;
+}
+
+select {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  color: #ff6f47;
+  width: 200px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 12px;
+  font-size: 20px;
+}
+
+.select {
+  margin: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: #ff6f47;
+  padding: 10px;
+  pointer-events: none;
+  border-radius: 0 10px 10px 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.select:hover::after {
+  background: white;
+  color: #ff6f47;
+}
